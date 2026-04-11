@@ -233,6 +233,38 @@ class List<T> {
     return res;
   }
 
+  //************************************ splitAt() ******************************* */
+  public List<T> splitAt(int split){
+    List<T> l2 = new List<T>();
+    Node<T> temp;
+    List<T> OL = new List<>();
+    OL.size = this.size;
+    temp = this.head;
+    
+    
+  
+     l2.size = OL.size-(split+1);
+    
+    if (split >= this.size|| split < 0){
+      System.out.println("Index is out of bounds!");
+    }else if (this.isEmpty()) {
+      System.out.println("The list is empty !");
+    }else{
+      while (split > 0){
+        temp = temp.getNext();
+        
+        --split;
+      }
+      l2.head = temp.getNext();
+      temp.setNext(null);
+    }
+    
+
+    this.size = (OL.size - l2.size);
+    this.displayAll();
+   
+    return l2;
+  }
 
 }
 
@@ -252,6 +284,7 @@ public class assignment5 {
       System.out.println( "____________Main Menu_____________________");
       System.out.println( "select option :");
       System.out.println( "1: insert back");
+      System.out.println( "11: insert sorted");
       System.out.println( "2: insert front");
       System.out.println( "3: insert at index");
       System.out.println( "4: display items");
@@ -259,6 +292,8 @@ public class assignment5 {
       System.out.println( "6: delete back");
       System.out.println( "7: delete front");
       System.out.println( "8: delete at index");
+      System.out.println( "88: split at");
+      System.out.println( "99: sort list");
       System.out.println( "9: exit");
       ch = sc.nextInt();
 
@@ -267,6 +302,9 @@ public class assignment5 {
           System.out.println( "enter item to insert:");
           item = sc.nextInt(); // read in an integer
           list.addLast(item);
+          break;
+        case 11:
+          System.out.println("not completed :(");
           break;
         case 2:
           System.out.println( "enter item to insert:");
@@ -300,8 +338,20 @@ public class assignment5 {
           index = sc.nextInt();
           list.removeAt(index);
           break;
+        case 88:
+          System.out.println( "enter index:");
+          index = sc.nextInt();
+          list.displayAll();
+           List<Integer> NL =list.splitAt(index);
+           NL.displayAll();
+
+
+          break;
         case 9:
           quit = true;
+          break;
+        case 99:
+          System.out.println("not completed :(");
           break;
         default:
           System.out.println( "invalid selection");
