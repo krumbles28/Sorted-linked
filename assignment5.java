@@ -261,9 +261,27 @@ class List<T> {
     
 
     this.size = (OL.size - l2.size);
-    this.displayAll();
-   
-    return l2;
+
+
+    return l2 ;
+  }
+
+  //************************************ insertSorted() ******************************* */
+
+  public void insertSorted(T item){
+    Node<T> temp;
+    temp = this.head;
+    int c=0;
+    while ((temp.getElement().toString().compareTo(item.toString())) < 0){
+      c++; 
+      temp = temp.getNext();
+
+    }
+    this.addAt(c, item);
+    
+
+
+
   }
 
 }
@@ -304,7 +322,9 @@ public class assignment5 {
           list.addLast(item);
           break;
         case 11:
-          System.out.println("not completed :(");
+          System.out.println("enter item to insert:");
+          item = sc.nextInt();
+          list.insertSorted(item);
           break;
         case 2:
           System.out.println( "enter item to insert:");
@@ -342,8 +362,10 @@ public class assignment5 {
           System.out.println( "enter index:");
           index = sc.nextInt();
           list.displayAll();
-           List<Integer> NL =list.splitAt(index);
+           List <Integer> NL =list.splitAt(index);
+           list.displayAll();
            NL.displayAll();
+           
 
 
           break;
