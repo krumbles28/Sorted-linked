@@ -237,34 +237,36 @@ class List<T> {
   public List<T> splitAt(int split){
     List<T> l2 = new List<T>();
     Node<T> temp;
-    List<T> OL = new List<>();
-    OL.size = this.size;
+    int size;
+    size = this.size();
     temp = this.head;
-    
-    
-  
-     l2.size = OL.size-(split+1);
-    
-    if (split >= this.size|| split < 0){
+
+    l2.size = size-(split+1);
+    if(this.size() == 1){
+      return l2;
+    }else if (split >= this.size|| split < 0){
       System.out.println("Index is out of bounds!");
+      return l2;
     }else if (this.isEmpty()) {
       System.out.println("The list is empty !");
+      return l2;
+    }else if (split == 0) {
+      l2.head = this.head.getNext();
+      this.head.setNext(null);
+      return l2;
     }else{
-      while (split > 0){
+      int count = 0;
+      while (count < split ){
         temp = temp.getNext();
-        
-        --split;
+        count++;
       }
       l2.head = temp.getNext();
       temp.setNext(null);
-    }
-    
+      return l2;
+   }
+   this.size = (size - l2.size());
+}
 
-    this.size = (OL.size - l2.size);
-
-
-    return l2 ;
-  }
 
   //************************************ insertSorted() ******************************* */
 
