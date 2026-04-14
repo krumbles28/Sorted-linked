@@ -241,6 +241,7 @@ class List<T> {
     int size;
     size = this.size();
     temp = this.head;
+<<<<<<< HEAD
     
     
   
@@ -248,24 +249,44 @@ class List<T> {
     if(this.size() == 1){
 return l2;
   }else if (split >= this.size|| split < 0){
+=======
+
+    l2.size = size-(split+1);
+    if(this.size() == 1){
+      return l2;
+    }else if (split >= this.size|| split < 0){
+>>>>>>> refs/remotes/origin/main
       System.out.println("Index is out of bounds!");
       return l2;
     }else if (this.isEmpty()) {
       System.out.println("The list is empty !");
+<<<<<<< HEAD
 return l2;
+=======
+      return l2;
+>>>>>>> refs/remotes/origin/main
     }else if (split == 0) {
       l2.head = this.head.getNext();
       this.head.setNext(null);
       return l2;
+<<<<<<< HEAD
       
     }else{
       while (split > 1){
         temp = temp.getNext();
         --split;
+=======
+    }else{
+      int count = 0;
+      while (count < split ){
+        temp = temp.getNext();
+        count++;
+>>>>>>> refs/remotes/origin/main
       }
       if(temp.getElement() != null && temp.getNext()!= null ){
         l2.head = temp.getNext();
       temp.setNext(null);
+<<<<<<< HEAD
       }
       this.size = (size - l2.size());
 
@@ -277,6 +298,13 @@ return l2;
     
 
     
+=======
+      return l2;
+   }
+   this.size = (size - l2.size());
+}
+
+>>>>>>> refs/remotes/origin/main
 
   //************************************ insertSorted() ******************************* */
 
