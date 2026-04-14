@@ -1,0 +1,153 @@
+Script started on 2026-04-14 19:36:06-04:00 [TERM="xterm-256color" TTY="/dev/pts/16" COLUMNS="80" LINES="24"]
+[?2004h]0;eagletonk2@thur114-hp1: ~/CSCI271-SortedLinkedLists[01;32meagletonk2@thur114-hp1[00m:[01;34m~/CSCI271-SortedLinkedLists[00m$ java assignment5 
+[?2004l____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+1
+enter item to insert:
+55
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+1
+enter item to insert:
+77
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+1
+enter item to insert:
+44
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+1
+enter item to insert:
+22
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+4
+displayAll():
+____________List of 4 items________________
+[ 55 , 77 , 44 , 22] 
+
+displayRecursively():
+____________List of 4 items________________
+[ 55 , 77 , 44 , 22] 
+
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+99
+new node added at front !
+new node added at index 2
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+4
+displayAll():
+____________List of 4 items________________
+[ 22 , 44 , 55 , 77] 
+
+displayRecursively():
+____________List of 4 items________________
+[ 22 , 44 , 55 , 77] 
+
+____________Main Menu_____________________
+select option :
+1: insert back
+11: insert sorted
+2: insert front
+3: insert at index
+4: display items
+5: get item at index
+6: delete back
+7: delete front
+8: delete at index
+88: split at
+99: sort list
+9: exit
+9
+[?2004h]0;eagletonk2@thur114-hp1: ~/CSCI271-SortedLinkedLists[01;32meagletonk2@thur114-hp1[00m:[01;34m~/CSCI271-SortedLinkedLists[00m$ nano output.txt
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;34H(B[0;7m[ Reading... ](B[m[22;33H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2                       output.txt                                 [1;79H(B[m[23d(B[0;7m^G(B[m Help[14G(B[0;7m^O(B[m Write Out (B[0;7m^W(B[m Where Is  (B[0;7m^K(B[m Cut[53G(B[0;7m^T(B[m Execute   (B[0;7m^C(B[m Location[24d(B[0;7m^X(B[m Exit[14G(B[0;7m^R(B[m Read File (B[0;7m^\(B[m Replace   (B[0;7m^U(B[m Paste     (B[0;7m^J(B[m Justify   (B[0;7m^/(B[m Go To Line[2d[?12l[?25h[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;eagletonk2@thur114-hp1: ~/CSCI271-SortedLinkedLists[01;32meagletonk2@thur114-hp1[00m:[01;34m~/CSCI271-SortedLinkedLists[00m$ exit 0
+[?2004lexit
+
+Script done on 2026-04-14 19:37:41-04:00 [COMMAND_EXIT_CODE="0"]
