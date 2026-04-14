@@ -107,6 +107,7 @@ class List<T> {
         newNode.setNext(this.head);
         this.head = newNode;
       }
+      this.size++;
       System.out.println("new node added at index "+ index);
     }
   }
@@ -237,54 +238,99 @@ class List<T> {
   public List<T> splitAt(int split){
     List<T> l2 = new List<T>();
     Node<T> temp;
-    List<T> OL = new List<>();
-    OL.size = this.size;
+    int size;
+    size = this.size();
     temp = this.head;
     
     
   
-     l2.size = OL.size-(split+1);
-    
-    if (split >= this.size|| split < 0){
+     l2.size = size-(split+1);
+    if(this.size() == 1){
+return l2;
+  }else if (split >= this.size|| split < 0){
       System.out.println("Index is out of bounds!");
+      return l2;
     }else if (this.isEmpty()) {
       System.out.println("The list is empty !");
+return l2;
+    }else if (split == 0) {
+      l2.head = this.head.getNext();
+      this.head.setNext(null);
+      return l2;
+      
     }else{
-      while (split > 0){
+      while (split > 1){
         temp = temp.getNext();
-        
         --split;
       }
-      l2.head = temp.getNext();
+      if(temp.getElement() != null && temp.getNext()!= null ){
+        l2.head = temp.getNext();
       temp.setNext(null);
+      }
+      this.size = (size - l2.size());
+
+
+    return l2;
+  }
+      
     }
     
 
-    this.size = (OL.size - l2.size);
-
-
-    return l2 ;
-  }
+    
 
   //************************************ insertSorted() ******************************* */
 
   public void insertSorted(T item){
-    Node<T> temp;
-    temp = this.head;
-    int c=0;
-    while ((temp.getElement().toString().compareTo(item.toString())) < 0){
-      c++; 
-      temp = temp.getNext();
-
+    if (this.isEmpty()){
+      this.addFront(item);
+      return;
+    }else{
+          Node<T> temp = this.head;
+        int c =0;
+        while (temp.getElement().toString().compareTo(item.toString())<0) {
+            c++;
+            if (temp.getNext() != null){
+              temp = temp.getNext();
+            }else{
+              break;
+            }
+            
+        }
+        if(c>=this.size){
+          this.addLast(item);
+        }else{
+          this.addAt(c, item);
+        }
+        
+        
+          
+          
     }
-    this.addAt(c, item);
+    }
+    
+    
+    
     
 
 
 
-  }
+  
 
+  //************************************ InsertionSort() ******************************* */
+  public void InsertionSort(){
+    List<T> L2;
+     if (!this.isEmpty()) {
+     L2 = this.splitAt(0);
+     L2.InsertionSort();
+     L2.insertSorted(this.head.getElement());
+     this.head = L2.head;
+    }
+    
+    
+  }
 }
+
+
 
 // The class for the Main Program
 public class assignment5 {
@@ -365,15 +411,13 @@ public class assignment5 {
            List <Integer> NL =list.splitAt(index);
            list.displayAll();
            NL.displayAll();
-           
-
 
           break;
         case 9:
           quit = true;
           break;
         case 99:
-          System.out.println("not completed :(");
+          list.InsertionSort();
           break;
         default:
           System.out.println( "invalid selection");
